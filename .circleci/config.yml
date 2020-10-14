@@ -4,7 +4,7 @@ jobs:
    docker:
       - image: ubuntu:18.04
    environment:
-      CONFIG: 'msm8937-perf_defconfig'
+      CONFIG: 'X00P_defconfig'
       VERSION: '3.18'
    steps:
       - run:
@@ -16,7 +16,7 @@ jobs:
            chmod a+x ~/bin/repo
            go get -u github.com/tcnksm/ghr
            export PATH=/root/go/bin:$PATH
-           git clone https://github.com/raza231198/q_kernel_zb555kl -b 1 kernel
+           git clone https://github.com/raza231198/kernel_asus_X00P -b twrp kernel
            cd kernel
            wget -q https://raw.githubusercontent.com/raza231198/circleci_kernel/main/build.sh
            source build.sh
