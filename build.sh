@@ -63,4 +63,4 @@ echo -e "\n(i) Making ZiP"
 cd $ZIP_DIR
 cp $KERN_IMG $ZIP_DIR
 make normal &>/dev/null
-ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Latest Release for $(echo $DEVICE)" -b "PBRP $(echo $VERSION)" -c ${CIRCLE_SHA1} -delete ${VERSION} ${ZIP_DIR}
+ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Latest Release for $(echo $DEVICE)" -b "Kernel $(echo $VERSION)" -c ${CIRCLE_SHA1} -delete ${VERSION} ${ZIP_DIR}
