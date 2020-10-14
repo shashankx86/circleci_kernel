@@ -4,6 +4,7 @@ jobs:
    docker:
       - image: ubuntu:18.04
    environment:
+      CONFIG: 'msm8937-perf_defconfig'
       VERSION: '3.18'
    steps:
       - run:
