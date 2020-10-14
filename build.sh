@@ -37,10 +37,12 @@ echo -e "║║─║║║║╚╗║║─║║─║╚═╝║║║─�
 echo -e "║╚═╝║║║─║║║╔╣─╗╚══╗║║╚═╝║║╚══╗";
 echo -e "╚═══╝╚╝─╚═╝╚══╝───╚╝╚═══╝╚═══╝";
 
-echo -e "\n(i) Cloning toolcahin..."
+echo -e "\n(i) Cloning ToolChain..."
 git clone https://github.com/raza231198/aarch64-linux-android-4.9 aarch64-linux-android-4.9
-make  O=out $CONFIG $THREAD &>/dev/null
-make  O=out $THREAD & pid=$!
+
+echo -e "\n(i) Staring Build..."
+make  O=out $CONFIG $THREAD
+make  O=out $THREAD
 
 echo -e "\n(i) Cloning AnyKernel3..."
 git clone https://github.com/raza231198/AnyKernel3 AnyKernel3
