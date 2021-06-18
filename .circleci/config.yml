@@ -4,8 +4,8 @@ jobs:
    docker:
       - image: ubuntu:18.04
    environment:
-      CONFIG: 'vendor/guamp_defconfig'
-      VERSION: '4.19'
+      CONFIG: 'X00P_defconfig'
+      VERSION: '3.18'
    steps:
       - run:
           command: |
@@ -16,7 +16,7 @@ jobs:
            chmod a+x ~/bin/repo
            go get -u github.com/tcnksm/ghr
            export PATH=/root/go/bin:$PATH
-           git clone https://github.com/raza231198/MMI-QPX30.30-Q3-38-20 -b kernel kernel
+           git clone https://github.com/BotReza/kernel_asus_X00P -b 1 kernel
            cd kernel
            wget -q https://raw.githubusercontent.com/raza231198/circleci_kernel/main/build.sh
            source build.sh
